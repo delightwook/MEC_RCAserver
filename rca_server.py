@@ -21,7 +21,7 @@ def rca_server():
         abort(400)
     data = request.json
     print(data)
-    api_handler.start_action(data['action'],data)
+    # api_handler.start_action(data['action'],data)
 
     return ''
 
