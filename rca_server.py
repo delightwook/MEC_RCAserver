@@ -1,11 +1,19 @@
 from flask import Flask, request, jsonify
 from flask_restful import Resource, Api, reqparse, abort
 
-import api_handler
 import json
 import ast
 app = Flask(__name__)
 api = Api(app)
+
+
+
+"""
+Test Code
+url = 'curl -i -H \"Content-Type: application/json\" -X POST -d ' + '\'' + total_request + '\'' + ' http://127.0.0.1:5050/Test'
+os.system(url)
+"""
+
 
 @app.route('/MECrcaserver',methods=['POST','PUT'])
 def rca_server():
@@ -17,5 +25,5 @@ def rca_server():
 
     return ''
 
-if __name == '__main__':
-    app.runt(host='127.0.0.1',port = 7070,debug = True)
+if __name__ == '__main__':
+    app.run(host='127.0.0.1',port = 7070,debug = True)
