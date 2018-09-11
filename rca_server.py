@@ -19,7 +19,6 @@ def rca_server():
     data = request.json
     print(data)
     # api_handler.start_action(data['action'],data)
-
     return ''
 
 if __name__ == '__main__':
